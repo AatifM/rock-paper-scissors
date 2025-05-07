@@ -1,3 +1,12 @@
+body {
+    background: url('https://www.transparenttextures.com/patterns/parchment.png');
+    background-color: #f3e5ab;
+    font-family: 'MedievalSharp', cursive;
+    color: #4b2e11;
+    text-align: center;
+    padding: 50px 20px;
+}
+
 #main-container {
     display: flex;
     flex-direction: column;
@@ -16,9 +25,19 @@
 }
 
 .choice {
+    background-color: #d4c196;
+    border: 3px solid #6b4f1d;
+    color: #2c1a06;
+    font-size: 1.3rem;
+    padding: 20px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px #6b4f1d;
+    text-transform: uppercase;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
 }
 
 #results-container {
     text-align: center;
+    font-size: medium;
 }
