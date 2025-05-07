@@ -5,8 +5,8 @@ let computerScore = 0;
 
 document.querySelectorAll(".choice").forEach(button => {
     button.addEventListener("click", (event) => {
-        if (humanScore === 5 || computerScore ===5) {
-            declareWinner(humanScore, computerScore);
+        if (humanScore === 5 || computerScore === 5) {
+            return
         } else {
             choice = event.target.textContent.toLowerCase();
             playRound(choice, getComputerChoice());
@@ -54,6 +54,9 @@ function playRound(humanChoice, computerChoice) {
     }
 
     gameResults.textContent = `score: ${humanScore} - ${computerScore}`;
+    if (humanScore === 5 || computerScore === 5) {
+        declareWinner(humanScore, computerScore);
+    }
 }
 
 function declareWinner(humanScore, computerScore) {
